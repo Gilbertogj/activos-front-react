@@ -407,6 +407,28 @@ export const OpcionesSelectEmpresaResponsableFinanzas = {
   ],
 };
 
+export const OpcionesSelectMarcaMotor = {
+  label: "Marca del motor",
+  id: "marca_motor",
+  name: "marca_motor",
+  defaultValue: "",
+  opciones: [
+    {
+      texto: "",
+      valor: "",
+    },
+    {
+      texto: "provitional",
+      valor: "provitional",
+    },
+    {
+      texto: "provitional_",
+      valor: "provitional_",
+    },
+    
+    
+  ],
+};
 
 
 

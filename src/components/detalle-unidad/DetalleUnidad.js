@@ -343,6 +343,17 @@ export const DetalleUnidad = ({ detallesUnidad, urlId }) => {
             </Link>
         </div>
 
+        <div className="d-flex justify-content-end mt-2 ">
+            
+            <Link
+              to={`/unidades/unidad/${detallesUnidad.id}/transito/1`}
+              className="btn mb-2"
+              style={{ backgroundColor: "#00C08B", color: "white" }}
+            >
+              Ver Inventario de la unidad  
+            </Link>
+        </div>
+
 
 
           {/* <div className="d-flex justify-content-end mt-2 ">

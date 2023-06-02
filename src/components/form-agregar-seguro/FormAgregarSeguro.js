@@ -29,6 +29,7 @@ const initialState = {
     servicio: "",
     remolque: "",
     valor_poliza: "",
+    importe_valor_comercial:"",
     
 };
 
@@ -83,6 +84,7 @@ export const FormAgregarSeguro = ({ unidadId, obraData }) => {
     formData.append("servicio", form.servicio);
     formData.append("remolque", form.remolque);
     formData.append("valor_poliza", form.valor_poliza);
+    formData.append("importe_valor_comercial", form.importe_valor_comercial);
     formData.append("unidad", unidadId);
     formData.append("usuario", 1);
 
@@ -220,8 +222,8 @@ export const FormAgregarSeguro = ({ unidadId, obraData }) => {
                 value={form.asegurada}
               >
                 <option></option>
-                <option value="si">Sí</option>
-                <option value="no">No</option>
+                <option value="Si">Sí</option>
+                <option value="No">No</option>
               </select>
              
             </div>
@@ -344,8 +346,8 @@ export const FormAgregarSeguro = ({ unidadId, obraData }) => {
                 value={form.carga_tipo_b}
               >
                 <option></option>
-                <option value="si">Sí</option>
-                <option value="no">No</option>
+                <option value="Si">Sí</option>
+                <option value="No">No</option>
               </select>
              
             </div>
@@ -397,8 +399,8 @@ export const FormAgregarSeguro = ({ unidadId, obraData }) => {
                 value={form.remolque}
               >
                 <option></option>
-                <option value="si">Sí</option>
-                <option value="no">No</option>
+                <option value="Si">Sí</option>
+                <option value="No">No</option>
               </select>
             </div>
 
@@ -419,6 +421,23 @@ export const FormAgregarSeguro = ({ unidadId, obraData }) => {
                   e.target.blur();
                 }}
                 />
+            </div>
+
+            <div className="mb-2">
+            <label htmlFor="importe_valor_comercial" className="form-label">
+                  Importe valor comercial
+              </label>
+              <select
+                className="form-select"
+                id="importe_valor_comercial"
+                name="importe_valor_comercial"
+                onChange={handleChange}
+                value={form.importe_valor_comercial}
+              >
+                <option></option>
+                <option value="Comercial">Comercial</option>
+                <option value="Convenio">Convenio</option>
+              </select>
             </div>
 
 

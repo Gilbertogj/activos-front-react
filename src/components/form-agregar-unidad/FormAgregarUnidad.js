@@ -10,6 +10,7 @@ import {
     OpcionesSelectUbicacionResguardo,
     OpcionesSelectTipoCombustible,
     OpcionesSelectMarcaUnidad,
+    OpcionesSelectMarcaMotor,
     
 } from "../../utils/selects-opciones";
 
@@ -909,17 +910,11 @@ export const FormAgregarUnidad = ({formToEdit}) => {
               </div>
 
               <div className="col-12 col-md-6">
-                <label htmlFor="marca_motor" className="form-label">
-                  Marca del motor
-                </label>
-                <input
-                  type="text"
-                  name="marca_motor"
-                  id="marca_motor"
-                  value={form.marca_motor}
-                  onChange={handleChange}
-                  className="form-control"
-                  autoComplete="off"
+                <CustomSelect
+                  datos={OpcionesSelectMarcaMotor}
+                  handleChange={handleChange}
+                  // selectRef={categoriaUnidadRef}
+                  form={form.marca_motor}
                 />
               </div>
             </div>
