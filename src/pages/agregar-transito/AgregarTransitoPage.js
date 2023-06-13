@@ -5,7 +5,7 @@ import { useFetchAndLoading } from "../../hooks/useFetchAndLoading";
 import { LoadingSpinner } from "../../components/loading-spinner/LoadingSpinner";
 import { FormAgregarTransito } from "../../components/form-agregar-transito/FormAgregarTransito";
 
-export const AgregarSeguroPage = () => {
+export const AgregarTransitoPage = () => {
     const { id } = useParams();
 
   return (

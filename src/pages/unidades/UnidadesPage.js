@@ -12,6 +12,7 @@ import { AgregarInformacionFinancieraPage } from "../agregar-informacion-financi
 import { SeguroUnidadPage } from "../seguro-unidad/SeguroUnidadPage.js";
 import { AgregarSeguroPage } from "../agregar-seguro/AgregarSeguroPage.js";
 import { TransitoUnidadPage } from "../transito-unidad/TransitoUnidadPage.js";
+import { AgregarTransitoPage } from "../agregar-transito/AgregarTransitoPage.js";
 
 import { AgregarClientePage } from "../agregar-cliente/AgregarClientePage";
 import { AgregarObraPage } from "../agregar-obra/AgregarObraPage";
@@ -132,6 +133,20 @@ export const UnidadesPage = () => {
           <div className="p-3">
           <TransitoUnidadPage/>
             {/* <p>pagina de financiera unidad</p> */}
+          </div>
+        </Route>
+
+        <Route exact path={`${path}/agregar-transito/:id`}>
+          <div className="p-3">
+          <AgregarTransitoPage/>
+            {/* <p>pagina de financiera unidad</p> */}
+          </div>
+        </Route>
+
+        <Route exact path={`${path}/editar-unidad/:id`}>
+          <div className="p-3">
+            {/* <EditarClientePage /> */}
+            <p>pagina de edicion unidad</p>
           </div>
         </Route>
 

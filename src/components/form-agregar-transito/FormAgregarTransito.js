@@ -7,7 +7,7 @@ import { setCurrentUser } from "../../redux/user/userSlice";
 import { ModalRedirect } from "../modal-redirect/ModalRedirect";
 import { CustomSelect } from "../custom-select/CustomSelect";
 
-import "./FormAgregarSeguro.styles.scss";
+import "./FormAgregarTransito.styles.scss";
 
 import {
 
@@ -76,42 +76,42 @@ export const FormAgregarTransito = ({ unidadId, obraData }) => {
 
     const formData = new FormData();
 
-    if (fotoFrontalUnidadRef.current.files[0]) {
+    if (fotoPlacasFrontalRef.current.files[0]) {
         formData.append("foto_placas_frontal", fotoPlacasFrontalRef.current.files[0]);
     }
 
-    if (fotoFrontalUnidadRef.current.files[0]) {
+    if (fotoPlacasTraseraRef.current.files[0]) {
       formData.append("foto_placas_trasera", fotoPlacasTraseraRef.current.files[0]);
     }
 
-    if (fotoFrontalUnidadRef.current.files[0]) {
+    if (fotoTarjetaCirculacionRef.current.files[0]) {
         formData.append("foto_tarjeta_circulacion", fotoTarjetaCirculacionRef.current.files[0]);
     }
-    if (fotoFrontalUnidadRef.current.files[0]) {
+    if (fotoOperadorRef.current.files[0]) {
         formData.append("foto_operador", fotoOperadorRef.current.files[0]);
     }
-    if (fotoFrontalUnidadRef.current.files[0]) {
+    if (fotoLicenciaOperadorFrontalRef.current.files[0]) {
         formData.append("foto_licencia_operador_frontal", fotoLicenciaOperadorFrontalRef.current.files[0]);
     }
-    if (fotoFrontalUnidadRef.current.files[0]) {
+    if (fotoLicenciaOperadorPosteriorRef.current.files[0]) {
         formData.append("foto_licencia_operador_posterior", fotoLicenciaOperadorPosteriorRef.current.files[0]);
     }
-    if (fotoFrontalUnidadRef.current.files[0]) {
+    if (cartaResponsivaEntregaRef.current.files[0]) {
         formData.append("carta_responsiva_entrega", cartaResponsivaEntregaRef.current.files[0]);
     }
-    if (fotoFrontalUnidadRef.current.files[0]) {
+    if (cartaResponsivaOperadorRef.current.files[0]) {
         formData.append("carta_responsiva_operador", cartaResponsivaOperadorRef.current.files[0]);
     }
-    if (fotoFrontalUnidadRef.current.files[0]) {
+    if (permisoCargaSCTRef.current.files[0]) {
         formData.append("permiso_carga_sct", permisoCargaSCTRef.current.files[0]);
     }
-    if (fotoFrontalUnidadRef.current.files[0]) {
+    if (permisoEmpresaRef.current.files[0]) {
         formData.append("permiso_empresa", permisoEmpresaRef.current.files[0]);
     }
-    if (fotoFrontalUnidadRef.current.files[0]) {
+    if (verificacionEstatalRef.current.files[0]) {
         formData.append("verificacion_estatal", verificacionEstatalRef.current.files[0]);
     }
-    if (fotoFrontalUnidadRef.current.files[0]) {
+    if (verificacionFederalRef.current.files[0]) {
         formData.append("verificacion_federal", verificacionFederalRef.current.files[0]);
     }
 

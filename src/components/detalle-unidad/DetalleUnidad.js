@@ -4,6 +4,8 @@ import { DeleteClientButton } from "../delete-client-button/DeleteClientButton";
 
 import { ReactComponent as EditarLogo } from "../../assets/svg/iconoEditar.svg";
 
+import "./DetalleUnidad.styles.scss";
+
 
 export const DetalleUnidad = ({ detallesUnidad, urlId }) => {
   const { pathname } = useLocation();
@@ -21,17 +23,15 @@ export const DetalleUnidad = ({ detallesUnidad, urlId }) => {
             </div>
             <div>
               <div className="d-flex  flex-column align-items-center">
-                {/* {detallesCliente.id &&
-                  pathname.includes("logistica") &&
-                  !pathname.includes("realizar-pedido") && ( */}
-                    {/* <Link
-                      to={`/concreco/logistica/editar-cliente/${detallesCliente.id}`}
-                    > */}
+                
+                    <Link
+                      to={`/unidades/editar-unidad/${detallesUnidad.id}`}
+                    >
                       <div style={{ width: "40px" }}>
                         <EditarLogo />
                       </div>
-                    {/* </Link> */}
-                   {/* )} */}
+                    </Link>
+                  
               
                
                 {/* {detallesCliente.id && !pathname.includes("pedido") && (
@@ -42,33 +42,9 @@ export const DetalleUnidad = ({ detallesUnidad, urlId }) => {
         
               
               </div>
-              <div className="d-flex  flex-column align-items-center">
-                <Link
-                to={`/unidades/agregar-informacion-financiera/${detallesUnidad.id}`}
-                className="btn mb-2"
-                style={{ backgroundColor: "#00C08B", color: "white" }}
-              >
-                Agregar Información Financiera
-              </Link>
-              </div>
-              <div className="d-flex  flex-column align-items-center">
-                <Link
-                to={`/unidades/agregar-seguro/${detallesUnidad.id}`}
-                className="btn mb-2"
-                style={{ backgroundColor: "#00C08B", color: "white" }}
-              >
-                Agregar Seguro
-              </Link>
-              </div>
-              <div className="d-flex  flex-column align-items-center">
-                <Link
-                to={`/unidades/agregar-transito/${detallesUnidad.id}`}
-                className="btn mb-2"
-                style={{ backgroundColor: "#00C08B", color: "white" }}
-              >
-                Agregar Informacion de Tránsito
-              </Link>
-              </div>
+             
+              
+              
             </div>
             
           </div>
@@ -79,7 +55,7 @@ export const DetalleUnidad = ({ detallesUnidad, urlId }) => {
                 <strong>Número económico: </strong> {detallesUnidad.numero_economico}
               </li>
               <li className="list-group-item">
-                <strong>Nombre:</strong> Camion Olla 
+                <strong>Nombre:</strong> {detallesUnidad.nombre} 
               </li>
               <li className="list-group-item">
                 <strong>Estatus de la unidad: </strong> {detallesUnidad.status_unidad}
@@ -112,7 +88,7 @@ export const DetalleUnidad = ({ detallesUnidad, urlId }) => {
               <li className="list-group-item">
                 <strong>Tipo de combustible:</strong> {detallesUnidad.tipo_combustible}
               </li>
-              <li className="list-group-item">
+              {/* <li className="list-group-item">
                 <strong>Fotografía frontal:</strong> 
                 {detallesUnidad.fotografia_frontal ? (
               <a
@@ -121,6 +97,30 @@ export const DetalleUnidad = ({ detallesUnidad, urlId }) => {
                 href={detallesUnidad.fotografia_frontal}
               >
                 Imagen
+              </a>
+            ) : (
+              " No hay imagen"
+            )}
+
+
+
+              </li> */}
+
+
+             <li className="list-group-item">
+              <script type="text/javascript">
+              const a1 = detallesUnidad.fotografia_derecha;
+              
+              </script>
+             <strong>Fotografía frontal:</strong> 
+              {/* <img id ="foo"src={detallesUnidad.fotografia_frontal} ></img> */}
+              {detallesUnidad.fotografia_frontal ? (
+              <a
+                target="_blank"
+                rel="noreferrer"
+                href={detallesUnidad.fotografia_frontal}
+              >
+                {" "}Imagen
               </a>
             ) : (
               " No hay imagen"
@@ -134,7 +134,7 @@ export const DetalleUnidad = ({ detallesUnidad, urlId }) => {
                 rel="noreferrer"
                 href={detallesUnidad.fotografia_derecha}
               >
-                Imagen
+                {" "}Imagen
               </a>
             ) : (
               " No hay imagen"
@@ -148,7 +148,7 @@ export const DetalleUnidad = ({ detallesUnidad, urlId }) => {
                 rel="noreferrer"
                 href={detallesUnidad.fotografia_izquierda}
               >
-                Imagen
+                {" "}Imagen
               </a>
             ) : (
               " No hay imagen"
@@ -162,7 +162,7 @@ export const DetalleUnidad = ({ detallesUnidad, urlId }) => {
                 rel="noreferrer"
                 href={detallesUnidad.fotografia_trasera}
               >
-                Imagen
+                {" "}Imagen
               </a>
             ) : (
               " No hay imagen"
@@ -176,7 +176,7 @@ export const DetalleUnidad = ({ detallesUnidad, urlId }) => {
                 rel="noreferrer"
                 href={detallesUnidad.fotografia_cabina}
               >
-                Imagen
+                {" "}Imagen
               </a>
             ) : (
               " No hay imagen"
@@ -190,7 +190,7 @@ export const DetalleUnidad = ({ detallesUnidad, urlId }) => {
                 rel="noreferrer"
                 href={detallesUnidad.fotografia_placa_identificacion}
               >
-                Imagen
+                {" "}Imagen
               </a>
             ) : (
               " No hay imagen"
@@ -214,7 +214,7 @@ export const DetalleUnidad = ({ detallesUnidad, urlId }) => {
                 rel="noreferrer"
                 href={detallesUnidad.foto_motor_frontal}
               >
-                Imagen
+                {" "}Imagen
               </a>
             ) : (
               " No hay imagen"
@@ -228,7 +228,7 @@ export const DetalleUnidad = ({ detallesUnidad, urlId }) => {
                 rel="noreferrer"
                 href={detallesUnidad.foto_lateral_dereacha}
               >
-                Imagen
+                {" "}Imagen
               </a>
             ) : (
               " No hay imagen"
@@ -242,7 +242,7 @@ export const DetalleUnidad = ({ detallesUnidad, urlId }) => {
                 rel="noreferrer"
                 href={detallesUnidad.foto_lateral_izquierda}
               >
-                Imagen
+                {" "}Imagen
               </a>
             ) : (
               " No hay imagen"
@@ -256,7 +256,7 @@ export const DetalleUnidad = ({ detallesUnidad, urlId }) => {
                 rel="noreferrer"
                 href={detallesUnidad.foto_numero_serie_motor}
               >
-                Imagen
+                {" "}Imagen
               </a>
             ) : (
               " No hay imagen"
@@ -273,7 +273,7 @@ export const DetalleUnidad = ({ detallesUnidad, urlId }) => {
                 rel="noreferrer"
                 href={detallesUnidad.foto_numero_serie_chasis}
               >
-                Imagen
+                {" "}Imagen
               </a>
             ) : (
               " No hay imagen"
@@ -292,67 +292,96 @@ export const DetalleUnidad = ({ detallesUnidad, urlId }) => {
           </div>
 
           <div className="d-flex justify-content-end mt-2 ">
+
+          {detallesUnidad.informacion_financiera.id?
+             <Link
+             to={`/unidades/unidad/${detallesUnidad.id}/informacion-financiera/${detallesUnidad.informacion_financiera.id}`}
+             className="btn mb-2"
+             style={{ backgroundColor: "#00C08B", color: "white" }}
+           >
+             Ver Información Financiera de la Unidad
+           </Link>
+            : 
+            <Link
+              to={`/unidades/agregar-informacion-financiera/${detallesUnidad.id}`}
+              className="btn mb-2"
+              style={{ backgroundColor: "#0d6efd", color: "white" }}
+            >
+              Agregar Informacion Financiera de la Unidad
+            </Link>
+
+          }
             
 
             
 
             
-              <Link
-                to={`/unidades/unidad/${detallesUnidad.id}/informacion-financiera/1`}
-                className="btn mb-2"
-                style={{ backgroundColor: "#00C08B", color: "white" }}
-              >
-                Ver Información Financiera
-              </Link>
              
            
-            {/* {pathname.includes("comercializacion") &&
-              !pathname.includes("cotizacion") && (
-                <Link
-                  to={`/concreco/comercializacion/cliente/${detallesCliente.id}/obras`}
-                  className="btn mb-2"
-                  style={{ backgroundColor: "#00C08B", color: "white" }}
-                >
-                  Ver Obras
-                </Link>
-              )} */}
+         
               
           </div>
           <div className="d-flex justify-content-end mt-2 ">
-            
-            <Link
-              to={`/unidades/unidad/${detallesUnidad.id}/seguro/1`}
+          {detallesUnidad.seguro.id?
+             <Link
+              to={`/unidades/unidad/${detallesUnidad.id}/seguro/${detallesUnidad.seguro.id}`}
               className="btn mb-2"
               style={{ backgroundColor: "#00C08B", color: "white" }}
-            >
+             >
               Ver Seguro de la Unidad
+             </Link>
+            : 
+            <Link
+              to={`/unidades/agregar-seguro/${detallesUnidad.id}`}
+              className="btn mb-2"
+              style={{ backgroundColor: "#0d6efd", color: "white" }}
+            >
+              Agregar Seguro a la unidad
             </Link>
+
+          }
             
+
          
       
         </div>
 
         <div className="d-flex justify-content-end mt-2 ">
-            
+
+        {detallesUnidad.transito.id?
+             <Link
+             to={`/unidades/unidad/${detallesUnidad.id}/transito/${detallesUnidad.transito.id}`}
+             className="btn mb-2"
+             style={{ backgroundColor: "#00C08B", color: "white" }}
+           >
+             Ver Tránsito de la unidad 
+           </Link>
+            : 
             <Link
-              to={`/unidades/unidad/${detallesUnidad.id}/transito/1`}
+              to={`/unidades/agregar-transito/${detallesUnidad.id}`}
               className="btn mb-2"
-              style={{ backgroundColor: "#00C08B", color: "white" }}
+              style={{ backgroundColor: "#0d6efd", color: "white" }}
             >
-              Ver Tránsito de la unidad 
+              Agregar Tránsito de la Unidad
             </Link>
+
+          }
+
+
+            
+           
         </div>
 
-        <div className="d-flex justify-content-end mt-2 ">
+        {/* <div className="d-flex justify-content-end mt-2 ">
             
             <Link
               to={`/unidades/unidad/${detallesUnidad.id}/transito/1`}
               className="btn mb-2"
-              style={{ backgroundColor: "#00C08B", color: "white" }}
+              style={{ backgroundColor: "green", color: "white" }}
             >
               Ver Inventario de la unidad  
             </Link>
-        </div>
+        </div> */}
 
 
 
