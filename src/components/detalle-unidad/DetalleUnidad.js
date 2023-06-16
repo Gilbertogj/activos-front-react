@@ -34,9 +34,15 @@ export const DetalleUnidad = ({ detallesUnidad, urlId }) => {
                   
               
                
-                {/* {detallesCliente.id && !pathname.includes("pedido") && (
-                  <DeleteClientButton />
-                )} */}
+                 
+             <Link
+             to={`/unidades/unidad/${detallesUnidad.id}/informacion-financiera/${detallesUnidad.informacion_financiera.id}`}
+             className="btn mb-2"
+             style={{ backgroundColor: "#00C08B", color: "white" }}
+           >
+             Ver Inventario de la unidad
+           </Link>     
+      
 
 
         
@@ -291,6 +297,16 @@ export const DetalleUnidad = ({ detallesUnidad, urlId }) => {
             </ul>
           </div>
 
+        <div className="d-flex justify-content-end mt-2 ">
+             <Link
+             to={`/unidades/unidad/${detallesUnidad.id}/inventario`}
+             className="btn mb-2"
+             style={{ backgroundColor: "#FFC107", color: "black" }}
+           >
+             Ver Inventario de la unidad
+           </Link>     
+        </div>
+
           <div className="d-flex justify-content-end mt-2 ">
 
           {detallesUnidad.informacion_financiera.id?
@@ -311,14 +327,6 @@ export const DetalleUnidad = ({ detallesUnidad, urlId }) => {
             </Link>
 
           }
-            
-
-            
-
-            
-             
-           
-         
               
           </div>
           <div className="d-flex justify-content-end mt-2 ">

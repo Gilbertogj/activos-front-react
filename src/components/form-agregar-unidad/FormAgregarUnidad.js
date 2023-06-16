@@ -94,7 +94,7 @@ export const FormAgregarUnidad = ({formToEdit}) => {
 
     const verificarSiClienteExiste = async () => {
       let data = await fetch(
-        `${process.env.REACT_APP_API_CONCRECO_BACKEND_URL}/api/clientes/${id}/`,
+        `${process.env.REACT_APP_ACTIVOS_BACKEND_URL}/api/unidades/${id}/`,
         {
           headers: {
             // Authorization: `Token ${authtoken}`,
@@ -108,7 +108,7 @@ export const FormAgregarUnidad = ({formToEdit}) => {
         dispatch(setCurrentUser({ token: json.token }));
 
         data = await fetch(
-          `${process.env.REACT_APP_API_CONCRECO_BACKEND_URL}/api/clientes/${id}/`,
+          `${process.env.REACT_APP_ACTIVOS_BACKEND_URL}/api/unidades/${id}/`,
           {
             headers: {
               // Authorization: `Token ${json.token}`,
@@ -118,57 +118,218 @@ export const FormAgregarUnidad = ({formToEdit}) => {
 
         json = await data.json();
       }
-      console.log(json.pago);
+      
+      if(json.categoria === "Construcción"){
+        console.log("si");
+      document.querySelector("#familia").innerHTML = `
+      <option value=""></option>
+      <option value="Bulldozer">Bulldozer</option>
+      <option value="Cargadores/Payloaders">Cargadores/Payloaders</option>
+      <option value="Compactadoras">Compactadoras</option>
+      <option value="Excavadoras">Excavadoras</option>
+      <option value="Generadores">Generadores</option>
+      <option value="Retroexcavadora con cargador">Retroexcavadora con cargador</option>
+      <option value="Aditamentos">Aditamentos</option>
+      `;
+          
+      }else if (json.categoria === "Logística") {
+        document.querySelector("#familia").innerHTML = `
+        <option value=""></option>
+        <option value="Tracto camión (Tráiler)">Tracto camión (Tráiler)</option>
+        <option value="Góndola (30m3)">Góndola (30m3)</option>
+        <option value="Remolque">Remolque</option>
+        <option value="Dolly">Dolly</option>
+        `;
+        }else if (json.categoria === "Carga y manipulación") {
+          document.querySelector("#familia").innerHTML = `
+          <option value=""></option>
+          <option value="Montacargas">Montacargas</option>
+          <option value="Grúas">Grúas</option>
+          `;
+        }else if (json.categoria === "Equipo de Asfalto") {
+            document.querySelector("#familia").innerHTML = `
+            <option value=""></option>
+            <option value="Pavimentación de Asfalto">Pavimentación de Asfalto</option>
+            <option value="Plantas y componentes de asfalto">Plantas y componentes de asfalto</option>
+            <option value="Equipo de Molienda">Equipo de Molienda</option>
+            <option value="Petrolizadora">Petrolizadora</option>
+            <option value="Compactadoras">Compactadoras</option>
+            `;
+        }else if (json.categoria === "Concreto") {
+          document.querySelector("#familia").innerHTML = `
+          <option value=""></option>
+          <option value="Camiones mezcladores de concreto">Camiones mezcladores de concreto</option>
+          <option value="Bomba estacionaria">Bomba estacionaria</option>
+          <option value="Planta de concreto">Planta de concreto</option>
+          <option value="Silo de concreto">Silo de concreto</option>
+          <option value="Equipo de dosificación de concreto">Equipo de dosificación de concreto</option>
+          `;
+        }else if (json.categoria === "Trituración") {
+          document.querySelector("#familia").innerHTML = `
+          <option value=""></option>
+          <option value="Criba">Criba</option>
+          <option value="Transportador">Transportador</option>
+          <option value="Trituradora">Trituradora</option>
+          `;
+        }else if (json.categoria === "Unidades utilitarias") {
+          document.querySelector("#familia").innerHTML = `
+          <option value=""></option>
+          <option value="Comercialización">Comercialización</option>
+          <option value="Transporte de personal">Transporte de personal</option>
+          <option value="Atenciones emergentes en obra/trituradoras">Atenciones emergentes en obra/trituradoras</option>
+          `;
+        }
+
+      
+          if(json.familia === "Compactadoras"){
+          document.querySelector("#subfamilia").innerHTML = `
+          <option value=""></option>
+          <option value="Pata de cabra">Pata de cabra</option>
+          <option value="Doble rodillo">Doble rodillo</option>
+          <option value="Rodillo vibratorio">Rodillo vibratorio</option>
+          <option value="Rodillo vibratorio doble">Rodillo vibratorio doble</option>
+          <option value="Rodillo neumático">Rodillo neumático</option>
+          <option value="Mini compactador">Mini compactador</option>
+          `;
+        
+              
+          }else if (json.familia === "Aditamentos") {
+          document.querySelector("#subfamilia").innerHTML = `
+          <option value=""></option>
+          <option value="Martillos hidráulicos">Martillos hidráulicos</option>
+          <option value="Barredoras">Barredoras</option>
+          `;
+       
+    
+        
+          }else if (json.familia === "Plantas y componentes de asfalto") {
+            document.querySelector("#subfamilia").innerHTML = `
+            <option value=""></option>
+            <option value="Planta de asfalto">Planta de asfalto</option>
+            <option value="Silo de Asfalto">Silo de Asfalto</option>
+            <option value="Calentador de aceite">Calentador de aceite</option>
+            `;
+          
+           
+          }else if (json.familia === "Equipo de Molienda") {
+              document.querySelector("#subfamilia").innerHTML = `
+              <option value=""></option>
+              <option value="Recicladora de pavimento asfáltico">Recicladora de pavimento asfáltico</option>
+              `;
+         
+        
+             
+          }else if (json.familia === "Compactadoras") {
+            document.querySelector("#subfamilia").innerHTML = `
+            <option value=""></option>
+            <option value="Compactador vibratorio">Compactador vibratorio</option>
+            <option value="Compactador Vibratorio doble">Compactador Vibratorio doble</option>
+            <option value="Compactador Neumático">Compactador Neumático</option>
+            `;
+     
+      
+          
+          }else if (json.familia === "Trituradora") {
+            document.querySelector("#subfamilia").innerHTML = `
+            <option value=""></option>
+            <option value="Trituradora de impacto">Trituradora de impacto</option>
+            <option value="Trituradora de cono">Trituradora de cono</option>
+            <option value="Trituradora de Quijada">Trituradora de Quijada</option>
+            <option value="Quebradora">Quebradora</option>
+            <option value="Trituradora de rodillos">Trituradora de rodillos</option>
+            `;
+          
+          }else{
+            subFamiliaRef.current.disabled = true;
+
+          }
+          
+    
+
 
       setForm({
         nombre: json.nombre,
-        alias: json.alias,
-        pago: json.pago,
-        rfc: json.rfc,
-        CFDI: json.CFDI === "N/A" ? "" : json.CFDI,
-        metodo_pago: json.metodo_pago === "N/A" ? "" : json.metodo_pago,
-        forma_pago: json.forma_pago === "N/A" ? "" : json.forma_pago,
-        correo_facturas: json.correo_facturas,
-        direccion: json.direccion,
-        telefono: json.telefono,
-        email: json.email,
-        sitio_web: json.sitio_web,
-        codigo_postal: json.codigo_postal,
-        estado_republica: json.estado_republica,
+        status_unidad: json.status_unidad,
+        ubicacion_resguardo: json.ubicacion_resguardo,
+        ano_unidad: json.ano_unidad,
+        categoria: json.categoria,
+        familia: json.familia,
+        subfamilia: json.subfamilia,
+        marca_unidad: json.marca_unidad,
+        modelo: json.modelo,
+        modelo_motor: json.modelo_motor,
+        marca_motor: json.marca_motor,
+        numero_serie_motor: json.numero_serie_motor,
+        numero_serie_unidad: json.numero_serie_unidad,
+        numero_serie_chasis: json.numero_serie_chasis,
+        numero_economico: json.numero_economico,
         municipio: json.municipio,
-        giro_de_empresa: json.giro_de_empresa,
-        medio_contacto: json.medio_contacto,
-        tipo_venta: json.tipo_venta,
+        tipo_combustible: json.tipo_combustible,
+        comentarios_generales: json.comentarios_generales,
+     
+        
+
+
+
+        // CFDI: json.CFDI === "N/A" ? "" : json.CFDI,
+        // metodo_pago: json.metodo_pago === "N/A" ? "" : json.metodo_pago,
+        // forma_pago: json.forma_pago === "N/A" ? "" : json.forma_pago,
+    
       });
+
+      console.log(json.categoria);
+
+      if (json.status_unidad === "Bajo resguardo/Pausada") {
+       
+
+        ubicacionResguardoRef.current.disabled = false;
+        
+      } else {
+       
+        ubicacionResguardoRef.current.disabled = true;
+      } 
+
+
+
+
+
+      if (json.categoria == "Construcción" ) {
+        document.querySelector("#familia").disabled = false;
+        
+      }
+
+
+      
+       
 
       // setData(json);
 
-      if (pagoRef.current.value === "G" || pagoRef.current.value === "Público General") {
-        rfcInputRef.current.disabled = true;
-        cfdiInputRef.current.disabled = true;
-        metodoPagoInputRef.current.disabled = true;
-        formaPagoInputRef.current.disabled = true;
-        correoFacturasInputRef.current.disabled = true;
-      }
+      // if (pagoRef.current.value === "G" || pagoRef.current.value === "Público General") {
+      //   rfcInputRef.current.disabled = true;
+      //   cfdiInputRef.current.disabled = true;
+      //   metodoPagoInputRef.current.disabled = true;
+      //   formaPagoInputRef.current.disabled = true;
+      //   correoFacturasInputRef.current.disabled = true;
+      // }
 
-      if(json.pago ==="F"){
-        console.log("si es f");
-        document.querySelector("#tipo-venta").innerHTML = `
-        <option value=""></option>
-        <option value="Contado">Contado</option>
-        <option value="Credito Check Plus">Crédito Check Plus</option>
-        <option value="Credito Concreco">Credito Concreco</option>
-        <option value="Anticipo">Anticipo</option>
+      // if(json.pago ==="F"){
+      //   console.log("si es f");
+      //   document.querySelector("#tipo-venta").innerHTML = `
+      //   <option value=""></option>
+      //   <option value="Contado">Contado</option>
+      //   <option value="Credito Check Plus">Crédito Check Plus</option>
+      //   <option value="Credito Concreco">Credito Concreco</option>
+      //   <option value="Anticipo">Anticipo</option>
         
-        `;
-      } else {
-        document.querySelector("#tipo-venta").innerHTML = `
-        <option value=""></option>
-        <option value="Contado">Contado</option>
-        <option value="Credito">Crédito</option>
-        <option value="Anticipo">Anticipo</option>
-        `;
-      }
+      //   `;
+      // } else {
+      //   document.querySelector("#tipo-venta").innerHTML = `
+      //   <option value=""></option>
+      //   <option value="Contado">Contado</option>
+      //   <option value="Credito">Crédito</option>
+      //   <option value="Anticipo">Anticipo</option>
+      //   `;
+      // }
       
 
     
@@ -176,6 +337,7 @@ export const FormAgregarUnidad = ({formToEdit}) => {
 
     if (id) {
       verificarSiClienteExiste();
+      // console.log("si es para editar");
     }
   }, []);
 
@@ -272,7 +434,7 @@ export const FormAgregarUnidad = ({formToEdit}) => {
         setForm({
           ...form,
          categoria:categoriaUnidadRef.current.value,
-         subfamilia:"",
+         familia: "",
         });
         return;
 
@@ -432,7 +594,7 @@ export const FormAgregarUnidad = ({formToEdit}) => {
     if (fotoSerieUnidadRef.current.files[0]) {
       formData.append("foto_numero_serie_chasis", fotoSerieUnidadRef.current.files[0]);
     }
-    // formData.append("nombre", form.nombre);
+    formData.append("nombre", form.nombre);
     formData.append("status_unidad", form.status_unidad);
     formData.append("ubicacion_resguardo", form.ubicacion_resguardo);
     formData.append("ano_unidad", form.ano_unidad);
@@ -463,12 +625,12 @@ export const FormAgregarUnidad = ({formToEdit}) => {
 
     if (formToEdit) {
       let data2 = await fetch(
-        `${process.env.REACT_APP_API_CONCRECO_BACKEND_URL}/api/clientes/${id}/`,
+        `${process.env.REACT_APP_ACTIVOS_BACKEND_URL}/api/unidades/${id}/`,
         {
           method: "PATCH",
           headers: {
             // "Content-Type": "application/json",
-            Authorization: `Token ${authtoken}`,
+            // Authorization: `Token ${authtoken}`,
           },
           // body: JSON.stringify(formulario),
           body: formData,
@@ -481,12 +643,12 @@ export const FormAgregarUnidad = ({formToEdit}) => {
         dispatch(setCurrentUser({ token: json2.token }));
 
         data2 = await fetch(
-          `${process.env.REACT_APP_API_CONCRECO_BACKEND_URL}/api/clientes/${id}/`,
+          `${process.env.REACT_APP_ACTIVOS_BACKEND_URL}/api/unidades/${id}/`,
           {
             method: "PATCH",
             headers: {
               // "Content-Type": "application/json",
-              Authorization: `Token ${json2.token}`,
+              // Authorization: `Token ${json2.token}`,
             },
             // body: JSON.stringify(formulario), 
             body: formData,
@@ -578,8 +740,8 @@ export const FormAgregarUnidad = ({formToEdit}) => {
         showConfirmModal={showConfirmModal}
         text={
           formToEdit
-            ? "Se han actualizado correctamente los datos del cliente."
-            : "Se ha creado correctamente el nuevo cliente."
+            ? "Se han actualizado correctamente los datos de la unidad."
+            : "Se ha creado correctamente la unidad."
         }
         link={
           formToEdit
@@ -656,7 +818,8 @@ export const FormAgregarUnidad = ({formToEdit}) => {
                   datos={OpcionesSelectEstatusUnidad}
                   handleChange={handleChange}
                   isRequired={true}
-                  form={form.status_unidad}
+                  // form={form.status_unidad}
+                  form={form}
                   selectRef={estatusRef}
                 />
               </div>
@@ -666,7 +829,8 @@ export const FormAgregarUnidad = ({formToEdit}) => {
                   datos={OpcionesSelectUbicacionResguardo}
                   handleChange={handleChange}
                   isRequired={true}
-                  form={form.ubicacion_resguardo}
+                  // form={form.ubicacion_resguardo}
+                  form={form}
                   selectRef={ubicacionResguardoRef}
                 />
               </div>
@@ -690,7 +854,8 @@ export const FormAgregarUnidad = ({formToEdit}) => {
                 id="familia"
                 name="familia"
                 onChange={handleChange}
-                value={form.tipo_venta}
+                // value={form.familia}
+                value={form.familia}
                 ref={familiaUnidadRef}
                 className="form-select"
                 required
@@ -723,7 +888,7 @@ export const FormAgregarUnidad = ({formToEdit}) => {
                   datos={OpcionesSelectTipoCombustible}
                   handleChange={handleChange}
                   // selectRef={categoriaUnidadRef}
-                  form={form.tipo_combustible}
+                  form={form}
                 />
               </div>
             </div>
@@ -734,7 +899,7 @@ export const FormAgregarUnidad = ({formToEdit}) => {
                   datos={OpcionesSelectMarcaUnidad}
                   handleChange={handleChange}
                   // selectRef={categoriaUnidadRef}
-                  form={form.marca_unidad}
+                  form={form}
                 />
               </div>
 
@@ -805,6 +970,7 @@ export const FormAgregarUnidad = ({formToEdit}) => {
                     id="fotografia_frontal"
                     className="form-control"
                     ref={fotoFrontalUnidadRef}
+                   
                   />
                 </div>
 
@@ -914,7 +1080,7 @@ export const FormAgregarUnidad = ({formToEdit}) => {
                   datos={OpcionesSelectMarcaMotor}
                   handleChange={handleChange}
                   // selectRef={categoriaUnidadRef}
-                  form={form.marca_motor}
+                  form={form}
                 />
               </div>
             </div>
