@@ -38,13 +38,13 @@ export const DetalleInformacionFinanciera = ({ detallesInfoFinanciera, urlId }) 
                 {/* {detallesCliente.id && !pathname.includes("pedido") && (
                   <DeleteClientButton />
                 )} */}
-                <Link
+                {/* <Link
                 to={`/unidades/unidad/${detallesInfoFinanciera.id}/financiera/1`}
                 className="btn mb-2"
                 style={{ backgroundColor: "#00C08B", color: "white" }}
               >
                 Ver Información Financiera
-              </Link>
+              </Link> */}
               
               </div>
             </div>
@@ -74,7 +74,7 @@ export const DetalleInformacionFinanciera = ({ detallesInfoFinanciera, urlId }) 
 
           <div className="d-flex justify-content-end mt-2 ">
 
-          <div className="d-flex justify-content-end mt-2 ">
+          {/* <div className="d-flex justify-content-end mt-2 ">
              <Link
              to={`/unidades/agregar-facturas/${id}`}
              className="btn mb-2"
@@ -82,7 +82,7 @@ export const DetalleInformacionFinanciera = ({ detallesInfoFinanciera, urlId }) 
            >
              Agregar Facturas
            </Link>     
-        </div>
+        </div> */}
             
 
             

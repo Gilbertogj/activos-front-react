@@ -93,12 +93,44 @@ export const OpcionesSelectUbicacionResguardo = {
       valor: "",
     },
     {
-      texto: "Opción 1",
-      valor: "Opción 1",
+      texto: "Ecomotriz",
+      valor: "Ecomotriz",
     },
     {
-      texto: "Opción 2",
-      valor: "Opción 2",
+      texto: "Concreco",
+      valor: "Concreco",
+    },
+    {
+      texto: "InBlock",
+      valor: "InBlock",
+    },
+    {
+      texto: "Asfaltos profesionales",
+      valor: "Asfaltos profesionales",
+    },
+    {
+      texto: "Consorcio constructor",
+      valor: "Consorcio constructor",
+    },
+    {
+      texto: "Seilsa",
+      valor: "Seilsa",
+    },
+    {
+      texto: "Bosque real inmobiliariaGrupo constructor santa ana",
+      valor: "Bosque real inmobiliariaGrupo constructor santa ana",
+    },
+    {
+      texto: "Grupo constructor santa ana",
+      valor: "Grupo constructor santa ana",
+    },
+    {
+      texto: "Estructuras profesionales",
+      valor: "Estructuras profesionales",
+    },
+    {
+      texto: "Arenas y gravas",
+      valor: "Arenas y gravas",
     },
     
   ],
@@ -414,16 +446,36 @@ export const OpcionesSelectMarcaMotor = {
   defaultValue: "",
   opciones: [
     {
-      texto: "",
-      valor: "",
+      texto: "Caterpillar",
+      valor: "Caterpillar",
     },
     {
-      texto: "provitional",
-      valor: "provitional",
+      texto: "Cummins",
+      valor: "Cummins",
     },
     {
-      texto: "provitional_",
-      valor: "provitional_",
+      texto: "Perkins",
+      valor: "Perkins",
+    },
+    {
+      texto: "Kubota",
+      valor: "Kubota",
+    },
+    {
+      texto: "Deutz",
+      valor: "Deutz",
+    },
+    {
+      texto: "Navistar",
+      valor: "Navistar",
+    },
+    {
+      texto: "Kenworth",
+      valor: "Kenworth",
+    },
+    {
+      texto: "International",
+      valor: "International",
     },
     
     

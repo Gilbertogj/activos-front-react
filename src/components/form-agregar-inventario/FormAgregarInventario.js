@@ -63,7 +63,7 @@ export const FormAgregarInventario = ({ unidadId, obraData }) => {
 
     const formData = new FormData();
 
-    if (fotoPlacasFrontalRef.current.files[0]) {
+    if (imagenRef.current.files[0]) {
         formData.append("foto", imagenRef.current.files[0]);
     }
 
@@ -217,7 +217,7 @@ export const FormAgregarInventario = ({ unidadId, obraData }) => {
                   </label>
                   <input
                     type="file"
-                    id="foto_pfotolacas_frontal"
+                    id="foto"
                     className="form-control"
                     ref={imagenRef}
                   />

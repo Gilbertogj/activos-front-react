@@ -12,10 +12,10 @@ export const TablaInventario = () => {
 
   const { id } = useParams();
 
-//   const { data, isLoading } = useFetchAndLoading(
-//     `${process.env.REACT_APP_API_CONCRECO_BACKEND_URL}/api/clientes/${id}/obras/`,
-//     id
-//   );
+  const { data, isLoading } = useFetchAndLoading(
+    `${process.env.REACT_APP_ACTIVOS_BACKEND_URL}/api/unidades/${id}/lineas`,
+    id
+  );
 
   return (
     <>
@@ -30,7 +30,7 @@ export const TablaInventario = () => {
               <h2>Obras de {data.nombre}</h2>
             )} */}
 
-            <h2>Inventario de "Número econónmico"</h2>
+            <h2>Inventario </h2>
           </div>
 
           <div className="d-flex justify-content-end mb-3">
@@ -54,24 +54,26 @@ export const TablaInventario = () => {
                   </tr>
                 </thead>
                 <tbody>
-                  {data.obras.map((obra) => (
-                    <tr key={obra.id}>
+                  {data.map((linea) => (
+                    <tr key={linea.id}>
                       <td>
                         
 
                             <Link
-                              to={`/concreco/comercializacion/obra/${obra.id}`}
+                              to={`/concreco/comercializacion/obra/${linea.id}`}
                             >
-                              {obra.id}
+                              {linea.descripcion}
                             </Link>
                       
                       </td>
                       <td>
-                      <Link
-                              to={`/concreco/comercializacion/obra/${obra.id}`}
-                            >
-                              {obra.id}
-                            </Link>
+                      <a
+                        target="_blank"
+                        rel="noreferrer"
+                        href={linea.foto}
+                      >
+                        {linea.foto ? "Imagen" : "No hay imagen"}
+                      </a>
                         
                       </td>
                      

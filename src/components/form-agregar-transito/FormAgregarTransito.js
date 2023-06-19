@@ -234,9 +234,9 @@ export const FormAgregarTransito = ({ unidadId, obraData }) => {
       <div className="row justify-content-center">
         <div className="col-12 col-sm-8">
           {obraData ? (
-            <h3 className="text-center">Editar Seguro de la unidad</h3>
+            <h3 className="text-center">Editar Tránsito de la unidad</h3>
           ) : (
-            <h3 className="text-center">Agregar Seguro de la unidad</h3>
+            <h3 className="text-center">Agregar Tránsito de la unidad</h3>
           )}
 
           <form

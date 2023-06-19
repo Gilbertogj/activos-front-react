@@ -14,6 +14,9 @@ import { AgregarSeguroPage } from "../agregar-seguro/AgregarSeguroPage.js";
 import { TransitoUnidadPage } from "../transito-unidad/TransitoUnidadPage.js";
 import { AgregarTransitoPage } from "../agregar-transito/AgregarTransitoPage.js";
 import { EditarUnidadPage } from "../editar-unidad/EditarUnidadPage.js";
+import { TablaInventario } from "../../components/tabla-inventario/TablaInventario";
+import { AgregarInventarioPage } from "../agregar-inventario/AgregarInventarioPage.js";
+
 
 
 import { AgregarClientePage } from "../agregar-cliente/AgregarClientePage";
@@ -31,7 +34,7 @@ import { ObraPage } from "../obra/ObraPage";
 
 
 
-import { TablaObras } from "../../components/tabla-obras/TablaObras";
+
 import { MainSectionCover } from "../../components/main-section-cover/MainSectionCover";
 import { MobileMenuButtons } from "../../components/mobile-menu-buttons/MobileMenuButtons";
 import { Layout } from "../../components/layout/Layout";
@@ -43,6 +46,8 @@ import { CondicionVentaPage } from "../condicion-venta/CondicionVentaPage";
 import { AgregarCondicionVentaPage } from "../agregar-condicion-venta/AgregarCondicionVentaPage";
 import { ListaLineasCotizacionesPage } from "../lista-lineas-cotizaciones/ListaLineasCotizacionesPage";
 import { ListaCotizacionesPage } from "../lista-cotizationes/ListaCotizacionesPage";
+import { Tabk } from "../lista-cotizationes/ListaCotizacionesPage";
+
 
 import "./UnidadesPage.styles.scss";
 import { AgregarPedidoCotizationPage } from "../agregar-pedido/AgregarPedidoCotizationPage";
@@ -153,14 +158,15 @@ export const UnidadesPage = () => {
 
         <Route exact path={`${path}/unidad/:id/inventario`}>
           <div className="p-3">
-            <p>pagina ver inventario</p>
-            {/* <EditarUnidadPage/> */}
+            {/* <p>pagina ver inventario</p> */}
+            <TablaInventario/>
+
           </div>
         </Route>
 
         <Route exact path={`${path}/agregar-inventario/:id`}>
           <div className="p-3">
-          <AgregarTransitoPage/>
+          <AgregarInventarioPage/>
             {/* <p>pagina de financiera unidad</p> */}
           </div>
         </Route>
@@ -214,11 +220,11 @@ export const UnidadesPage = () => {
             <AgregarClientePage />
           </div>
         </Route>
-        <Route exact path={`${path}/cliente/:id/obras`}>
+        {/* <Route exact path={`${path}/cliente/:id/obras`}>
           <div className="p-3">
             <TablaObras />
           </div>
-        </Route>
+        </Route> */}
         <Route exact path={`${path}/cliente/:id/condicion-venta`}>
           <div className="p-3">
             <TablaCondicionVenta />
@@ -280,11 +286,11 @@ export const UnidadesPage = () => {
             <ClientePage />
           </div>
         </Route>
-        <Route exact path={`${path}/cliente/:id/obras/realizar-pedido`}>
+        {/* <Route exact path={`${path}/cliente/:id/obras/realizar-pedido`}>
           <div className="p-3">
             <TablaObras />
           </div>
-        </Route>
+        </Route> */}
         <Route exact path={`${path}/obra/:id/realizar-pedido`}>
           <div className="p-3">
             <ObraPedidoPage />
