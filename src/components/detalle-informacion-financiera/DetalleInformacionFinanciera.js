@@ -8,6 +8,7 @@ import { ReactComponent as EditarLogo } from "../../assets/svg/iconoEditar.svg";
 export const DetalleInformacionFinanciera = ({ detallesInfoFinanciera, urlId }) => {
   const { pathname } = useLocation();
   const { id } = useParams();
+  const { idFinanzas } = useParams();
 
   return (
     <div className="container">
@@ -74,15 +75,15 @@ export const DetalleInformacionFinanciera = ({ detallesInfoFinanciera, urlId }) 
 
           <div className="d-flex justify-content-end mt-2 ">
 
-          {/* <div className="d-flex justify-content-end mt-2 ">
+          <div className="d-flex justify-content-end mt-2 ">
              <Link
-             to={`/unidades/agregar-facturas/${id}`}
+             to={`/unidades/informacion-financiera/${idFinanzas}/facturas`}
              className="btn mb-2"
-             style={{ backgroundColor: "#0d6efd", color: "white" }}
+             style={{ backgroundColor: "#00C08B", color: "white" }}
            >
-             Agregar Facturas
+            Ver Facturas
            </Link>     
-        </div> */}
+        </div>
             
 
             

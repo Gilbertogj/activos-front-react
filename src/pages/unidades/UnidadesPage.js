@@ -171,6 +171,13 @@ export const UnidadesPage = () => {
           </div>
         </Route>
 
+        <Route exact path={`${path}/informacion-financiera/:id/facturas`}>
+          <div className="p-3">
+          {/* <AgregarInventarioPage/> */}
+            <p>pagina de flas facturas</p>
+          </div>
+        </Route>
+
         
 
       
