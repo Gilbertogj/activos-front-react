@@ -16,6 +16,9 @@ import { AgregarTransitoPage } from "../agregar-transito/AgregarTransitoPage.js"
 import { EditarUnidadPage } from "../editar-unidad/EditarUnidadPage.js";
 import { TablaInventario } from "../../components/tabla-inventario/TablaInventario";
 import { AgregarInventarioPage } from "../agregar-inventario/AgregarInventarioPage.js";
+import { TablaFacturas } from "../../components/tabla-facturas/TablaFacturas";
+import { AgregarFacturaPage } from "../agregar-factura/AgregarFacturaPage.js";
+
 
 
 
@@ -78,7 +81,7 @@ export const UnidadesPage = () => {
           )}
         </Route>
         
-        <Route
+        {/* <Route
           exact
           path={`${path}/lista`}
           render={() =>
@@ -92,7 +95,14 @@ export const UnidadesPage = () => {
               <Redirect to="/home" />
             )
           }
-        ></Route>
+        ></Route> */}
+        
+        <Route exact path={`${path}/lista`}>
+          <div className="p-3">
+            <ListaUnidadesPage />
+            {/* <p>hola</p> */}
+          </div>
+        </Route>
         <Route exact path={`${path}/unidad/:id`}>
           <div className="p-3">
             <UnidadPage />
@@ -173,10 +183,19 @@ export const UnidadesPage = () => {
 
         <Route exact path={`${path}/informacion-financiera/:id/facturas`}>
           <div className="p-3">
-          {/* <AgregarInventarioPage/> */}
-            <p>pagina de flas facturas</p>
+          <TablaFacturas/>
+            {/* <p>pagina de flas facturas</p> */}
           </div>
         </Route>
+
+        <Route exact path={`${path}/agregar-facturas/:id`}>
+          <div className="p-3">
+          <AgregarFacturaPage/>
+            {/* <p>pagina de agregar </p> */}
+          </div>
+        </Route>
+
+       
 
         
 

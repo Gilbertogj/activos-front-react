@@ -39,7 +39,7 @@ export const LoginForm = () => {
       
       // const resp = await apiConcrecoUsers.post('/login/', body)
       const resp = await fetch(
-        process.env.REACT_APP_API_CONCRECO_BACKEND_URL + "/api/users/login/",
+        process.env.REACT_APP_ACTIVOS_BACKEND_URL + "/api/core/login/",
         {
           method: "POST",
           headers: {

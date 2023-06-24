@@ -40,7 +40,7 @@ export const ListaUnidadesPage = () => {
 
   const fetchUnidades = async (url) => {
     setIsLoading(true);
-    const data = await fetchData(url);
+    const data = await fetchData(url ,authtoken, dispatch, setCurrentUser);
     setUnidades(data);
 
     setIsLoading(false);

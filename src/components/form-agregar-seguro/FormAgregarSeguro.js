@@ -141,7 +141,7 @@ export const FormAgregarSeguro = ({ unidadId, obraData }) => {
           method: "POST",
           headers: {
             /* "Content-Type": "application/json", */
-            // Authorization: `Token ${authtoken}`,
+            Authorization: `Token ${authtoken}`,
           },
           body: formData,
         }

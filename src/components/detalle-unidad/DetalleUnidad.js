@@ -35,13 +35,13 @@ export const DetalleUnidad = ({ detallesUnidad, urlId }) => {
               
                
                  
-             <Link
+             {/* <Link
              to={`/unidades/unidad/${detallesUnidad.id}/informacion-financiera/${detallesUnidad.informacion_financiera.id}`}
              className="btn mb-2"
              style={{ backgroundColor: "#00C08B", color: "white" }}
            >
              Ver Inventario de la unidad
-           </Link>     
+           </Link>      */}
       
 
 

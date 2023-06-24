@@ -36,10 +36,10 @@ export const TablaFacturas = () => {
           <div className="d-flex justify-content-end mb-3">
            
               <Link
-                to={`/unidades/agregar-inventario/${id}`}
+                to={`/unidades/agregar-facturas/${id}`}
                 className="btn btn-primary"
               >
-                Agregar elemento
+                Agregar Factura
               </Link>
        
           </div>
@@ -76,10 +76,10 @@ export const TablaFacturas = () => {
                               {factura.original}
                       </td>
                       <td>   
-                              {factura.valor_factura_original}
+                              {"$"+factura.valor_factura_original}
                       </td>
                       <td>   
-                              {factura.valor_comercial }
+                              {"$"+factura.valor_comercial }
                       </td>
 
                       

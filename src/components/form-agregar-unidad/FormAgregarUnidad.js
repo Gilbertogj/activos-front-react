@@ -97,7 +97,7 @@ export const FormAgregarUnidad = ({formToEdit}) => {
         `${process.env.REACT_APP_ACTIVOS_BACKEND_URL}/api/unidades/${id}/`,
         {
           headers: {
-            // Authorization: `Token ${authtoken}`,
+            Authorization: `Token ${authtoken}`,
           },
         }
       );
@@ -630,7 +630,7 @@ export const FormAgregarUnidad = ({formToEdit}) => {
           method: "PATCH",
           headers: {
             // "Content-Type": "application/json",
-            // Authorization: `Token ${authtoken}`,
+            Authorization: `Token ${authtoken}`,
           },
           // body: JSON.stringify(formulario),
           body: formData,
@@ -663,7 +663,7 @@ export const FormAgregarUnidad = ({formToEdit}) => {
           alert("Este correo ya ha sido registrado");
         }
         if (json2.telefono) {
-          alert("Este teléfono ya ha sido registrado");
+          alert("Error");
           return;
         } else {
           alert("Error en datos");
@@ -684,7 +684,7 @@ export const FormAgregarUnidad = ({formToEdit}) => {
           method: "POST",
           headers: {
             // "Content-Type": "application/json",
-            // Authorization: `Token ${authtoken}`,
+            Authorization: `Token ${authtoken}`,
           },
           // body: JSON.stringify(formulario),
           body: formData,
@@ -720,7 +720,7 @@ export const FormAgregarUnidad = ({formToEdit}) => {
           alert("Este teléfono ya ha sido registrado");
           return;
         } else {
-          alert("Ingresa un teléfono");
+          alert("Error");
         }
       }
 

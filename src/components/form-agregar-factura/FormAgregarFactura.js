@@ -7,7 +7,7 @@ import { setCurrentUser } from "../../redux/user/userSlice";
 import { ModalRedirect } from "../modal-redirect/ModalRedirect";
 import { CustomSelect } from "../custom-select/CustomSelect";
 
-import "./FormAgregarInventario.styles.scss";
+import "./FormAgregarFactura.styles.scss";
 
 import {
 
@@ -17,18 +17,22 @@ import {
 } from "../../utils/selects-opciones";
 
 const initialState = {
-    descripcion: "",
+    factura: "",
+    original: "",
+    valor_comercial: "",
+    valor_factura_original: "",
  
     
 };
 
-export const FormAgregarInventario = ({ unidadId, obraData }) => {
+export const FormAgregarFactura = ({ infoFinancieraId, obraData }) => {
   const [form, setForm] = useState(initialState);
   const [showConfirmModal, setShowConfirmModal] = useState(false);
 
   const { authtoken, dispatch } = useContext(ReactReduxContext);
 
-  const imagenRef = useRef();
+  const archivoRef = useRef();
+  const originalRef = useRef();
 
 
 
@@ -63,12 +67,15 @@ export const FormAgregarInventario = ({ unidadId, obraData }) => {
 
     const formData = new FormData();
 
-    if (imagenRef.current.files[0]) {
-        formData.append("foto", imagenRef.current.files[0]);
+    if (archivoRef.current.files[0]) {
+        formData.append("archivo", archivoRef.current.files[0]);
     }
 
     formData.append("descripcion", form.descripcion);
-    formData.append("unidad", unidadId);
+    formData.append("original", form.original);
+    formData.append("valor_comercial", form.valor_comercial);
+    formData.append("valor_factura_original", form.valor_factura_original);
+    formData.append("informacion_financiera", infoFinancieraId);
     // formData.append("usuario", 1);
 
     
@@ -119,7 +126,7 @@ export const FormAgregarInventario = ({ unidadId, obraData }) => {
       }
     } else {
       let data = await fetch(
-        process.env.REACT_APP_ACTIVOS_BACKEND_URL + "/api/lineas-inventario/",
+        process.env.REACT_APP_ACTIVOS_BACKEND_URL + "/api/facturas/",
         {
           method: "POST",
           headers: {
@@ -169,21 +176,21 @@ export const FormAgregarInventario = ({ unidadId, obraData }) => {
         showConfirmModal={showConfirmModal}
         text={
           obraData
-            ? "Se ha actualizado correctamente el elemento."
-            : "Se ha creado correctamente el elemento."
+            ? "Se ha actualizado correctamente la factura."
+            : "Se ha creado correctamente la factura."
         }
         link={
             obraData
-            ? `/unidades/unidad/${unidadId}`
-            : `/unidades/unidad/${unidadId}`
+            ? `/unidades/informacion-financiera/${infoFinancieraId}/facturas`
+            : `/unidades/informacion-financiera/${infoFinancieraId}/facturas`
         }
       />
       <div className="row justify-content-center">
         <div className="col-12 col-sm-8">
           {obraData ? (
-            <h3 className="text-center">Editar elemento al inventario</h3>
+            <h3 className="text-center">Editar factura</h3>
           ) : (
-            <h3 className="text-center">Agregar elemento al inventario</h3>
+            <h3 className="text-center">Agregar factura</h3>
           )}
 
           <form
@@ -194,14 +201,14 @@ export const FormAgregarInventario = ({ unidadId, obraData }) => {
           >
             <div className="mb-2">
           
-            <label htmlFor="descripcion" className="form-label">
-                  Descripcion
+            <label htmlFor="factura" className="form-label">
+                  Factura
                 </label>
                 <input
                   type="text"
-                  name="descripcion"
-                  id="descripcion"
-                  value={form.descripcion}
+                  name="factura"
+                  id="factura"
+                  value={form.factura}
                   onChange={handleChange}
                   className="form-control"
                   autoComplete="off"
@@ -209,17 +216,76 @@ export const FormAgregarInventario = ({ unidadId, obraData }) => {
                 />
             </div>
 
+
+            <div className="mb-2">
+              <label htmlFor="original" className="form-label">
+                Original
+              </label>
+              <select
+                id="original"
+                name="original"
+                onChange={handleChange}
+                value={form.original}
+                ref={originalRef}
+                className="form-select"
+                required
+              >
+                <option value=""></option>
+                <option value="Si">Sí</option>
+                <option value="No">No</option>
+              </select>
+              </div>
+
+
+
+              <div className="mb-2">
+          
+            <label htmlFor="valor_factura_original" className="form-label">
+                  Valor factura original 
+                </label>
+                <input
+                  type="number"
+                  name="valor_factura_original"
+                  id="valor_factura_original"
+                  value={form.valor_factura_original}
+                  onChange={handleChange}
+                  className="form-control"
+                  autoComplete="off"
+                //   required
+                />
+            </div>
+
+
+              <div className="mb-2">
+          
+            <label htmlFor="valor_comercial" className="form-label">
+                  Valor comercial
+                </label>
+                <input
+                  type="number"
+                  name="valor_comercial"
+                  id="valor_comercial"
+                  value={form.valor_comercial}
+                  onChange={handleChange}
+                  className="form-control"
+                  autoComplete="off"
+                //   required
+                />
+            </div>
+
+            
+
             <div className="mb-2">
           
            
-                  <label htmlFor="foto" className="form-label">
-                    Imagen del elemento
+                  <label htmlFor="archivo" className="form-label">
+                    Archivo
                   </label>
                   <input
                     type="file"
-                    id="foto"
+                    id="archivo"
                     className="form-control"
-                    ref={imagenRef}
+                    ref={archivoRef}
                   />
              
             </div>
