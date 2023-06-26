@@ -446,6 +446,10 @@ export const OpcionesSelectMarcaMotor = {
   defaultValue: "",
   opciones: [
     {
+      texto: "",
+      valor: "",
+    },
+    {
       texto: "Caterpillar",
       valor: "Caterpillar",
     },

@@ -162,8 +162,7 @@ export const TablaUnidades = ({ unidades, setUnidades }) => {
                     `/unidades/unidad/${unidad.id}`
                     }
                   >
-                    {/* {pedido.fecha_pedido.slice(0, 10)} */}
-                    Camión Olla 
+                    {unidad.nombre}
                   </Link>
                 </td>
                 <td>
