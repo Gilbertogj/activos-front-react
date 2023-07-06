@@ -15,7 +15,7 @@ function SliderUnidad({
   return (
     <Carousel >
       <Carousel.Item>
-        <a href={frontal} target="_blank"><img width={100} height={300}
+        <a href={frontal} target="_blank"><img class="slider-image" width={100} height={300}
           className="d-block w-100"
         //   src="holder.js/800x400?text=First slide&bg=373940"
           src={frontal}
@@ -29,7 +29,7 @@ function SliderUnidad({
       </Carousel.Item>
 
       <Carousel.Item>
-        <a href={derecha} target="_blank"><img
+        <a href={derecha} target="_blank"><img class="slider-image"
           className="d-block w-100"
         //   src="holder.js/800x400?text=First slide&bg=373940"
           src={derecha}
@@ -43,7 +43,7 @@ function SliderUnidad({
       </Carousel.Item>
 
       <Carousel.Item>
-        <a href={izquierda} target="_blank"><img
+        <a href={izquierda} target="_blank"><img class="slider-image"
           className="d-block w-100"
         //   src="holder.js/800x400?text=First slide&bg=373940"
           src={izquierda}
@@ -57,7 +57,7 @@ function SliderUnidad({
       </Carousel.Item>
 
       <Carousel.Item>
-        <a href={trasera} target="_blank"><img
+        <a href={trasera} target="_blank"><img class="slider-image"
           className="d-block w-100"
         //   src="holder.js/800x400?text=First slide&bg=373940"
           src={trasera}
@@ -71,7 +71,7 @@ function SliderUnidad({
       </Carousel.Item>
 
       <Carousel.Item>
-        <a href={cabina} target="_blank"><img
+        <a href={cabina} target="_blank"><img class="slider-image"
           className="d-block w-100"
         //   src="holder.js/800x400?text=First slide&bg=373940"
           src={cabina}
@@ -87,7 +87,7 @@ function SliderUnidad({
       {/*  */}
 
       <Carousel.Item>
-        <a href={placa} target="_blank"><img
+        <a href={placa} target="_blank"><img class="slider-image"
           className="d-block w-100"
         //   src="holder.js/800x400?text=First slide&bg=373940"
           src={placa}

@@ -16,7 +16,7 @@ function SliderPermisos({
   return (
     <Carousel >
       <Carousel.Item>
-        <a href={cartaResponsivaEntrega} target="_blank"><img width={100} height={300}
+        <a href={cartaResponsivaEntrega} target="_blank"><img class="slider-image"
           className="d-block w-100"
         //   src="holder.js/800x400?text=First slide&bg=373940"
           src={cartaResponsivaEntrega}
@@ -30,7 +30,7 @@ function SliderPermisos({
       </Carousel.Item>
 
       <Carousel.Item>
-        <a href={cartaResponsivaOperador} target="_blank"><img
+        <a href={cartaResponsivaOperador} target="_blank"><img class="slider-image"
           className="d-block w-100"
         //   src="holder.js/800x400?text=First slide&bg=373940"
           src={cartaResponsivaOperador}
@@ -44,7 +44,7 @@ function SliderPermisos({
       </Carousel.Item>
 
       <Carousel.Item>
-        <a href={permisoCarga} target="_blank"><img
+        <a href={permisoCarga} target="_blank"><img class="slider-image"
           className="d-block w-100"
         //   src="holder.js/800x400?text=First slide&bg=373940"
           src={permisoCarga}
@@ -58,7 +58,7 @@ function SliderPermisos({
       </Carousel.Item>
 
       <Carousel.Item>
-        <a href={permisoEmpresa} target="_blank"><img
+        <a href={permisoEmpresa} target="_blank"><img class="slider-image"
           className="d-block w-100"
         //   src="holder.js/800x400?text=First slide&bg=373940"
           src={permisoEmpresa}
@@ -72,7 +72,7 @@ function SliderPermisos({
       </Carousel.Item>
 
       <Carousel.Item>
-        <a href={verificacionEstatal} target="_blank"><img
+        <a href={verificacionEstatal} target="_blank"><img class="slider-image"
           className="d-block w-100"
         //   src="holder.js/800x400?text=First slide&bg=373940"
           src={verificacionEstatal}
@@ -88,7 +88,7 @@ function SliderPermisos({
       {/*  */}
 
       <Carousel.Item>
-        <a href={verificacionFederal} target="_blank"><img
+        <a href={verificacionFederal} target="_blank"><img class="slider-image"
           className="d-block w-100"
         //   src="holder.js/800x400?text=First slide&bg=373940"
           src={verificacionFederal}

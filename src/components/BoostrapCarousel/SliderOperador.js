@@ -16,7 +16,7 @@ function SliderOperador({
   return (
     <Carousel >
       <Carousel.Item>
-        <a href={placasFrontal} target="_blank"><img width={100} height={300}
+        <a href={placasFrontal} target="_blank"><img class="slider-image"
           className="d-block w-100"
         //   src="holder.js/800x400?text=First slide&bg=373940"
           src={placasFrontal}
@@ -30,7 +30,7 @@ function SliderOperador({
       </Carousel.Item>
 
       <Carousel.Item>
-        <a href={placasTrasera} target="_blank"><img
+        <a href={placasTrasera} target="_blank"><img class="slider-image"
           className="d-block w-100"
         //   src="holder.js/800x400?text=First slide&bg=373940"
           src={placasTrasera}
@@ -44,7 +44,7 @@ function SliderOperador({
       </Carousel.Item>
 
       <Carousel.Item>
-        <a href={tarjetaCirculacion} target="_blank"><img
+        <a href={tarjetaCirculacion} target="_blank"><img class="slider-image"
           className="d-block w-100"
         //   src="holder.js/800x400?text=First slide&bg=373940"
           src={tarjetaCirculacion}
@@ -58,7 +58,7 @@ function SliderOperador({
       </Carousel.Item>
 
       <Carousel.Item>
-        <a href={operador} target="_blank"><img
+        <a href={operador} target="_blank"><img class="slider-image"
           className="d-block w-100"
         //   src="holder.js/800x400?text=First slide&bg=373940"
           src={operador}
@@ -72,7 +72,7 @@ function SliderOperador({
       </Carousel.Item>
 
       <Carousel.Item>
-        <a href={licenciaFrontal} target="_blank"><img
+        <a href={licenciaFrontal} target="_blank"><img class="slider-image"
           className="d-block w-100"
         //   src="holder.js/800x400?text=First slide&bg=373940"
           src={licenciaFrontal}
@@ -88,7 +88,7 @@ function SliderOperador({
       {/*  */}
 
       <Carousel.Item>
-        <a href={licenciaTrasera} target="_blank"><img
+        <a href={licenciaTrasera} target="_blank"><img class="slider-image"
           className="d-block w-100"
         //   src="holder.js/800x400?text=First slide&bg=373940"
           src={licenciaTrasera}

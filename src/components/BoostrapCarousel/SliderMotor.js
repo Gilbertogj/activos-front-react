@@ -15,7 +15,7 @@ function SliderMotor({
   return (
     <Carousel >
       <Carousel.Item>
-        <a href={frontal} target="_blank"><img width={100} height={300}
+        <a href={frontal} target="_blank"><img class="slider-image"
           className="d-block w-100"
         //   src="holder.js/800x400?text=First slide&bg=373940"
           src={frontal}
@@ -29,7 +29,7 @@ function SliderMotor({
       </Carousel.Item>
 
       <Carousel.Item>
-        <a href={derecha} target="_blank"><img
+        <a href={derecha} target="_blank"><img class="slider-image"
           className="d-block w-100"
         //   src="holder.js/800x400?text=First slide&bg=373940"
           src={derecha}
@@ -43,7 +43,7 @@ function SliderMotor({
       </Carousel.Item>
 
       <Carousel.Item>
-        <a href={izquierda} target="_blank"><img
+        <a href={izquierda} target="_blank"><img class="slider-image"
           className="d-block w-100"
         //   src="holder.js/800x400?text=First slide&bg=373940"
           src={izquierda}
@@ -57,7 +57,7 @@ function SliderMotor({
       </Carousel.Item>
 
       <Carousel.Item>
-        <a href={serie} target="_blank"><img
+        <a href={serie} target="_blank"><img class="slider-image"
           className="d-block w-100"
         //   src="holder.js/800x400?text=First slide&bg=373940"
           src={serie}
@@ -71,7 +71,7 @@ function SliderMotor({
       </Carousel.Item>
 
       <Carousel.Item>
-        <a href={chasis} target="_blank"><img
+        <a href={chasis} target="_blank"><img class="slider-image"
           className="d-block w-100"
         //   src="holder.js/800x400?text=First slide&bg=373940"
           src={chasis}
