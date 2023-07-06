@@ -101,6 +101,27 @@ export const OpcionesSelectUbicacionResguardo = {
       valor: "Concreco",
     },
     {
+      texto: "Concreco Planta 1",
+      valor: "Concreco Planta 1",
+    },
+    {
+      texto: "Concreco Planta 2",
+      valor: "Concreco Planta 2",
+    },
+    {
+      texto: "Concreco Planta 3",
+      valor: "Concreco Planta 3",
+    },
+    {
+      texto: "Concreco Planta 4",
+      valor: "Concreco Planta 4",
+    },
+    {
+      texto: "Concreco Planta 5",
+      valor: "Concreco Planta 5",
+    },
+
+    {
       texto: "InBlock",
       valor: "InBlock",
     },
@@ -321,6 +342,26 @@ export const OpcionesSelectEmpresaAltaFinanzas = {
       valor: "Concreco",
     },
     {
+      texto: "Concreco Planta 1",
+      valor: "Concreco Planta 1",
+    },
+    {
+      texto: "Concreco Planta 2",
+      valor: "Concreco Planta 2",
+    },
+    {
+      texto: "Concreco Planta 3",
+      valor: "Concreco Planta 3",
+    },
+    {
+      texto: "Concreco Planta 4",
+      valor: "Concreco Planta 4",
+    },
+    {
+      texto: "Concreco Planta 5",
+      valor: "Concreco Planta 5",
+    },
+    {
       texto: "Inblock",
       valor: "Inblock",
     },
@@ -398,6 +439,26 @@ export const OpcionesSelectEmpresaResponsableFinanzas = {
     {
       texto: "Concreco",
       valor: "Concreco",
+    },
+    {
+      texto: "Concreco Planta 1",
+      valor: "Concreco Planta 1",
+    },
+    {
+      texto: "Concreco Planta 2",
+      valor: "Concreco Planta 2",
+    },
+    {
+      texto: "Concreco Planta 3",
+      valor: "Concreco Planta 3",
+    },
+    {
+      texto: "Concreco Planta 4",
+      valor: "Concreco Planta 4",
+    },
+    {
+      texto: "Concreco Planta 5",
+      valor: "Concreco Planta 5",
     },
     {
       texto: "Inblock",

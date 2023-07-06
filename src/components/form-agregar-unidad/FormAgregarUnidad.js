@@ -239,6 +239,13 @@ export const FormAgregarUnidad = ({formToEdit}) => {
             <option value="Trituradora de rodillos">Trituradora de rodillos</option>
             `;
           
+          }else if (json.familia === "Montacargas") {
+            document.querySelector("#subfamilia").innerHTML = `
+            <option value=""></option>
+            <option value="4 Ruedas">4 Ruedas</option>
+            <option value="3 Ruedas">3 Ruedas</option>
+            `;
+          
           }else{
             subFamiliaRef.current.disabled = true;
 
@@ -521,6 +528,19 @@ export const FormAgregarUnidad = ({formToEdit}) => {
         <option value="Trituradora de Quijada">Trituradora de Quijada</option>
         <option value="Quebradora">Quebradora</option>
         <option value="Trituradora de rodillos">Trituradora de rodillos</option>
+        `;
+        setForm({
+          ...form,
+          familia:familiaUnidadRef.current.value,
+          subfamilia:subFamiliaRef.current.value,
+        });
+  
+        subFamiliaRef.current.disabled = false;
+      }else if (e.target.value === "Montacargas") {
+        document.querySelector("#subfamilia").innerHTML = `
+        <option value=""></option>
+        <option value="4 Ruedas">4 Ruedas</option>
+        <option value="3 Ruedas">3 Ruedas</option>
         `;
         setForm({
           ...form,

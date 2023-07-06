@@ -4,6 +4,9 @@ import { DeleteClientButton } from "../delete-client-button/DeleteClientButton";
 
 import { ReactComponent as EditarLogo } from "../../assets/svg/iconoEditar.svg";
 
+import SliderOperador from "../BoostrapCarousel/SliderOperador.js"
+import SliderPermisos from "../BoostrapCarousel/SliderPermisos.js"
+
 
 export const DetalleTransito = ({ detallesTransito, urlId }) => {
   const { pathname } = useLocation();
@@ -49,7 +52,7 @@ export const DetalleTransito = ({ detallesTransito, urlId }) => {
               <li className="list-group-item">
                 <strong>Placas: </strong> {detallesTransito.placas}
               </li>
-              <li className="list-group-item">
+              {/* <li className="list-group-item">
                 <strong>Foto placas frontal:</strong> 
                 {detallesTransito.foto_placas_frontal ? (
               <a
@@ -62,8 +65,8 @@ export const DetalleTransito = ({ detallesTransito, urlId }) => {
             ) : (
               " No hay imagen"
             )}
-              </li>
-              <li className="list-group-item">
+              </li> */}
+              {/* <li className="list-group-item">
                 <strong>Foto placas trasera:</strong> 
                 {detallesTransito.foto_placas_trasera ? (
               <a
@@ -76,9 +79,9 @@ export const DetalleTransito = ({ detallesTransito, urlId }) => {
             ) : (
               " No hay imagen"
             )}
-              </li>
-              <li className="list-group-item">
-                <strong>Foto tarejta de circulación:</strong> 
+              </li> */}
+              {/* <li className="list-group-item">
+                <strong>Foto tarjeta de circulación:</strong> 
                 {detallesTransito.foto_tarjeta_circulacion ? (
               <a
                 target="_blank"
@@ -90,11 +93,11 @@ export const DetalleTransito = ({ detallesTransito, urlId }) => {
             ) : (
               " No hay imagen"
             )}
-              </li>
+              </li> */}
               <li className="list-group-item">
                 <strong>Operador: </strong> {detallesTransito.operador}
               </li>
-              <li className="list-group-item">
+              {/* <li className="list-group-item">
                 <strong>Foto del operador:</strong> 
                 {detallesTransito.foto_operador ? (
               <a
@@ -107,11 +110,11 @@ export const DetalleTransito = ({ detallesTransito, urlId }) => {
             ) : (
               " No hay imagen"
             )}
-              </li>
+              </li> */}
               <li className="list-group-item">
                 <strong>Fecha de vencimiento de la licencia: </strong> {detallesTransito.fecha_vencimiento_licencia}
               </li>
-              <li className="list-group-item">
+              {/* <li className="list-group-item">
                 <strong>Foto frontal licencia del operador:</strong> 
                 {detallesTransito.foto_licencia_operador_frontal ? (
               <a
@@ -124,8 +127,8 @@ export const DetalleTransito = ({ detallesTransito, urlId }) => {
             ) : (
               " No hay imagen"
             )}
-              </li>
-              <li className="list-group-item">
+              </li> */}
+              {/* <li className="list-group-item">
                 <strong>Foto posterior licencia del operador:</strong> 
                 {detallesTransito.foto_licencia_operador_posterior ? (
               <a
@@ -138,11 +141,46 @@ export const DetalleTransito = ({ detallesTransito, urlId }) => {
             ) : (
               " No hay imagen"
             )}
-              </li>
+              </li> */}
               <li className="list-group-item">
                 <strong>Fecha de inicio de operación: </strong> {detallesTransito.fecha_inicio_operacion}
               </li>
+
               <li className="list-group-item">
+              <strong>Fotografías del operador, licencia y placas:</strong>
+              <SliderOperador
+                
+                
+                placasFrontal={detallesTransito.foto_placas_frontal}
+                placasTrasera={detallesTransito.foto_placas_trasera}
+                tarjetaCirculacion={detallesTransito.foto_tarjeta_circulacion}
+                operador={detallesTransito.foto_operador}
+                licenciaFrontal={detallesTransito.foto_licencia_operador_frontal}
+                licenciaTrasera={detallesTransito.foto_licencia_operador_posterior}
+
+                />
+
+
+              </li>
+
+              <li className="list-group-item">
+              <strong>Fotografías permsiso:</strong>
+              <SliderOperador
+                
+                
+                cartaResponsivaEntrega={detallesTransito.carta_responsiva_entrega}
+                cartaResponsivaOperador={detallesTransito.carta_responsiva_operador}
+                permisoCarga={detallesTransito.permiso_carga_sct}
+                permisoEmpresa={detallesTransito.permiso_empresa}
+                verificacionEstatal={detallesTransito.verificacion_estatal}
+                verificacionFederal={detallesTransito.verificacion_federal}
+
+                />
+
+
+              </li>
+
+              {/* <li className="list-group-item">
                 <strong>Carta responsiva de entrega:</strong> 
                 {detallesTransito.carta_responsiva_entrega ? (
               <a
@@ -171,7 +209,7 @@ export const DetalleTransito = ({ detallesTransito, urlId }) => {
             )}
               </li>
               <li className="list-group-item">
-                <strong>Permiso de carca SCT:</strong> 
+                <strong>Permiso de carga SCT:</strong> 
                 {detallesTransito.permiso_carga_sct ? (
               <a
                 target="_blank"
@@ -225,7 +263,7 @@ export const DetalleTransito = ({ detallesTransito, urlId }) => {
             ) : (
               " No hay imagen"
             )}
-              </li>
+              </li> */}
               
 
 

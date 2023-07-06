@@ -9,9 +9,15 @@ export const HomeButton = () => {
   return (
     <div className={styles.outerContainer}>
       <div className={styles.innerContainer}>
-        <Link to="/">
-          <img src={HomeIcon} alt="home" />
-        </Link>
+        <a href="https://www.portalgrupoeco.com.mx/#/">
+
+        <img src={HomeIcon} alt="home" />
+        
+
+
+        </a>
+        
+          
       </div>
     </div>
   );

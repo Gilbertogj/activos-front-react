@@ -5,7 +5,7 @@ import Col from "react-bootstrap/Col";
 
 import Logo from "../../assets/svg/logoEcoBlanco.svg";
 import { LoginForm } from "../../components/loginform/LoginForm";
-// import { HomeButton } from "../../components/home-button/HomeButton";
+import { HomeButton } from "../../components/home-button/HomeButton";
 
 import styles from "./LoginPage.module.scss";
 
@@ -23,7 +23,7 @@ export const LoginPage = () => {
         </Row>
       </Container>
 
-      {/* <HomeButton /> */}
+      <HomeButton />
     </div>
   );
 };
