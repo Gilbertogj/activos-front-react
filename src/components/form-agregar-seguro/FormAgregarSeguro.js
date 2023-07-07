@@ -270,7 +270,7 @@ export const FormAgregarSeguro = ({ unidadId, obraData }) => {
                   type="text"
                   name="certificado"
                   id="certificado"
-                  value={form.numero_poliza}
+                  value={form.certificado}
                   onChange={handleChange}
                   className="form-control"
                   autoComplete="off"
@@ -309,7 +309,7 @@ export const FormAgregarSeguro = ({ unidadId, obraData }) => {
                   type="text"
                   name="certificado"
                   id="certificado"
-                  value={form.numero_poliza}
+                  value={form.valor_asegurado}
                   onChange={handleChange}
                   className="form-control"
                   autoComplete="off"
