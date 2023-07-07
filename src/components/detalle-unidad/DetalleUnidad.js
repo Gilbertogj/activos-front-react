@@ -24,7 +24,7 @@ export const DetalleUnidad = ({ detallesUnidad, urlId }) => {
               .
             </div>
             <div className="text-center">
-              <h2>Camión olla </h2>
+              <h2>{detallesUnidad.nombre }</h2>
             </div>
             <div>
               <div className="d-flex  flex-column align-items-center">

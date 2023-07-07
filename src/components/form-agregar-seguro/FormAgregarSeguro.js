@@ -222,8 +222,8 @@ export const FormAgregarSeguro = ({ unidadId, obraData }) => {
                 value={form.asegurada}
               >
                 <option></option>
-                <option value="Si">Sí</option>
-                <option value="No">No</option>
+                <option value= {true}>Sí</option>
+                <option value= {false}>No</option>
               </select>
              
             </div>

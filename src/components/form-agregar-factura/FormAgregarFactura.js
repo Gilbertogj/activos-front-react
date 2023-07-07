@@ -71,6 +71,7 @@ export const FormAgregarFactura = ({ infoFinancieraId, obraData }) => {
         formData.append("archivo", archivoRef.current.files[0]);
     }
 
+    formData.append("factura", form.factura);
     formData.append("descripcion", form.descripcion);
     formData.append("original", form.original);
     formData.append("valor_comercial", form.valor_comercial);

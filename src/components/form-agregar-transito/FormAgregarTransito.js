@@ -222,8 +222,8 @@ export const FormAgregarTransito = ({ unidadId, obraData }) => {
         showConfirmModal={showConfirmModal}
         text={
           obraData
-            ? "Se ha actualizado correctamente la obra."
-            : "Se ha creado correctamente la obra."
+            ? "Se ha actualizado correctamente la información de tránsito."
+            : "Se ha creado correctamente la información de tránsito."
         }
         link={
             obraData
