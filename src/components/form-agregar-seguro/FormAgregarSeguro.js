@@ -319,7 +319,7 @@ export const FormAgregarSeguro = ({ unidadId, obraData }) => {
 
 
 
-            <div className="mb-2">
+            {/* <div className="mb-2">
             <label htmlFor="tipo_deducible" className="form-label">
                   Tipo de deducible 
                 </label>
@@ -333,6 +333,23 @@ export const FormAgregarSeguro = ({ unidadId, obraData }) => {
                   autoComplete="off"
                 //   required
                 />
+            </div> */}
+
+<div className="mb-2">
+            <label htmlFor="tipo_deducible" className="form-label">
+                Tipo de deducible
+              </label>
+              <select
+                className="form-select"
+                id="tipo_deducible"
+                name="tipo_deducible"
+                onChange={handleChange}
+                value={form.tipo_deducible}
+              >
+                <option></option>
+                <option value="Opción 1">Sí</option>
+                <option value="Opción 2">No</option>
+              </select>
             </div>
 
             <div className="mb-2">
@@ -373,7 +390,7 @@ export const FormAgregarSeguro = ({ unidadId, obraData }) => {
              
             </div>
 
-            <div className="mb-2">
+            {/* <div className="mb-2">
             <label htmlFor="servicio" className="form-label">
                   Servicio 
                 </label>
@@ -387,22 +404,24 @@ export const FormAgregarSeguro = ({ unidadId, obraData }) => {
                   autoComplete="off"
                 //   required
                 />
-            </div>
+            </div> */}
+
+            
 
             <div className="mb-2">
-            <label htmlFor="remolque" className="form-label">
-                Remolque
+            <label htmlFor="servicio" className="form-label">
+                Servicio
               </label>
               <select
                 className="form-select"
-                id="remolque"
-                name="remolque"
+                id="servicio"
+                name="servicio"
                 onChange={handleChange}
-                value={form.remolque}
+                value={form.servicio}
               >
                 <option></option>
-                <option value="Si">Sí</option>
-                <option value="No">No</option>
+                <option value="Opción 1">Sí</option>
+                <option value="Opción 2">No</option>
               </select>
             </div>
 
