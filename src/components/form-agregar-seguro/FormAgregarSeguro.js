@@ -302,13 +302,13 @@ export const FormAgregarSeguro = ({ unidadId, obraData }) => {
             </div>
 
             <div className="mb-2">
-            <label htmlFor="certificado" className="form-label">
+            <label htmlFor="valor_asegurado" className="form-label">
                   Valor asegurado
                 </label>
                 <input
                   type="text"
-                  name="certificado"
-                  id="certificado"
+                  name="valor_asegurado"
+                  id="valor_asegurado"
                   value={form.valor_asegurado}
                   onChange={handleChange}
                   className="form-control"
@@ -316,6 +316,8 @@ export const FormAgregarSeguro = ({ unidadId, obraData }) => {
                 //   required
                 />
             </div>
+
+
 
             <div className="mb-2">
             <label htmlFor="tipo_deducible" className="form-label">
