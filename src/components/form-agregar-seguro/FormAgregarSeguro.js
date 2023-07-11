@@ -319,7 +319,7 @@ export const FormAgregarSeguro = ({ unidadId, obraData }) => {
 
 
 
-            {/* <div className="mb-2">
+            <div className="mb-2">
             <label htmlFor="tipo_deducible" className="form-label">
                   Tipo de deducible 
                 </label>
@@ -333,9 +333,9 @@ export const FormAgregarSeguro = ({ unidadId, obraData }) => {
                   autoComplete="off"
                 //   required
                 />
-            </div> */}
+            </div>
 
-<div className="mb-2">
+{/* <div className="mb-2">
             <label htmlFor="tipo_deducible" className="form-label">
                 Tipo de deducible
               </label>
@@ -350,7 +350,7 @@ export const FormAgregarSeguro = ({ unidadId, obraData }) => {
                 <option value="Opción 1">Sí</option>
                 <option value="Opción 2">No</option>
               </select>
-            </div>
+            </div> */}
 
             <div className="mb-2">
           
@@ -365,7 +365,7 @@ export const FormAgregarSeguro = ({ unidadId, obraData }) => {
                 value={form.carga_tipo_b}
               >
                 <option></option>
-                <option value="Si">Sí</option>
+                <option value="Sí">Sí</option>
                 <option value="No">No</option>
               </select>
              
@@ -390,7 +390,7 @@ export const FormAgregarSeguro = ({ unidadId, obraData }) => {
              
             </div>
 
-            {/* <div className="mb-2">
+            <div className="mb-2">
             <label htmlFor="servicio" className="form-label">
                   Servicio 
                 </label>
@@ -404,11 +404,11 @@ export const FormAgregarSeguro = ({ unidadId, obraData }) => {
                   autoComplete="off"
                 //   required
                 />
-            </div> */}
+            </div>
 
             
 
-            <div className="mb-2">
+            {/* <div className="mb-2">
             <label htmlFor="servicio" className="form-label">
                 Servicio
               </label>
@@ -423,7 +423,7 @@ export const FormAgregarSeguro = ({ unidadId, obraData }) => {
                 <option value="Opción 1">Sí</option>
                 <option value="Opción 2">No</option>
               </select>
-            </div>
+            </div> */}
 
             <div className="mb-2">
             <label htmlFor="valor_poliza" className="form-label">
